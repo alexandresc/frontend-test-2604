@@ -1,0 +1,210 @@
+:root {
+  /* colors */
+  --primary-color: #f3f4ec;
+  --secondary-color: #6c6e71;
+  --forest-green: #292d33;
+  --charcoal: #202020;
+  --sunset: #d4491b;
+
+  /* typography */
+  --main-font: "indivisible", sans-serif;
+  --support-font: "shift", serif;
+}
+
+/* add your custom styles here 👇 */
+body {
+  margin: 0;
+}
+.iwt-container {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  background-color: var(--primary-color);
+}
+.iwt-container.inverse {
+  flex-direction: row-reverse;
+}
+.wrapper {
+  width: 50%;
+  display: flex;
+}
+.wrapper-image {
+  width: 50%;
+  max-height: 640px;
+}
+.wrapper-text {
+  padding-right: 100px;
+  padding-left: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.inverse .wrapper-text {
+  padding-right: 70px;
+  padding-left: 100px;
+}
+.iwt-country {
+  color: var(--sunset);
+  font-family: var(--main-font);
+  font-weight: 600;
+  font-size: 20px;
+  padding-bottom: 10px;
+  line-height: 26px;
+}
+.iwt-title {
+  color: var(--forest-green);
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 50px;
+  padding-bottom: 20px;
+  line-height: 60px;
+}
+.iwt-description {
+  color: var(--secondary-color);
+  font-family: var(--support-font);
+  font-weight: 400;
+  font-size: 20px;
+  padding-bottom: 40px;
+  line-height: 30px;
+}
+.iwt-button {
+  background-color: var(--forest-green);
+  color: var(--primary-color);
+  font-family: var(--main-font);
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 75px 10px 75px;
+  border-radius: 50px;
+}
+.iwt-image {
+  object-fit: cover;
+  width: 100%;
+  height: 640px;
+}
+/* mobile */
+@media screen and (max-width: 480px) {
+  .slick-carousel {
+    padding: 8px 14px 16px;
+  }
+  .slick-list {
+    border-radius: 10px;
+    box-shadow: 0em 0em 15px 0px #0000001A;
+    border: 1px solid #0000002e;
+  }
+  .wrapper {
+    width: auto;
+    padding: 0 10px;
+  }
+  .wrapper-image {
+    width: 100%;
+    max-height: 362px;
+  }
+  .iwt-image {
+    height: 362px;
+  }
+  .wrapper-text {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    align-items: center;
+  }
+  .inverse .wrapper-text {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    align-items: center;
+  }
+  .iwt-country {
+    font-size: 20px;
+    padding-bottom: 8px;
+    padding-top: 28px;
+  }
+  .iwt-title {
+    font-size: 32px;
+    padding-bottom: 14px;
+    line-height: 38px;
+    text-align: center;
+  }
+  .iwt-description {
+    font-size: 17px;
+    padding-bottom: 28px;
+    line-height: 25px;
+    text-align: center;
+  }
+  .iwt-button {
+    background-color: var(--forest-green);
+    color: var(--primary-color);
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 75px 10px 75px;
+    border-radius: 50px;
+    margin-bottom: 28px;
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    left: 0;
+  }
+  .slick-dots li {
+    position: relative;
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+  }
+  li.slick-active {
+    width: 28px;
+  }
+  .slick-dots li.slick-active button:before {
+    opacity: 0;
+    color: var(--sunset);
+  }
+  .slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 28px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: 1;
+    color: #DAD9D8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .slick-dots .slick-active button {
+    background-color: #d4491b;
+    height: 10px;
+    width: 28px;
+    border-radius: 30px;
+  }
+}
+
+
+
